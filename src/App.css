@@ -1,0 +1,67 @@
+:root {
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --primary-light: #a78bfa;
+  --bg-light: #f9f5ff;
+  --card-bg: #ffffff;
+  --text-dark: #1e1b4b;
+  --text-muted: #6b7280;
+  --border: #d1d5ff;
+  --shadow: 0 8px 30px rgba(139, 92, 246, 0.08);
+  --transition: all 0.25s ease;
+}
+
+body {
+  background: linear-gradient(135deg, #f3e8ff 0%, #f9f5ff 100%);
+  color: var(--text-dark);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 16px;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--primary-light) 50%,
+    var(--primary-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 2px 4px rgba(139, 92, 246, 0.25),
+    0 4px 12px rgba(124, 58, 237, 0.18);
+
+  position: relative;
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+
+.title:hover {
+  transform: translateY(-3px);
+  text-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.4),
+    0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+}
