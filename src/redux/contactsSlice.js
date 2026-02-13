@@ -46,7 +46,7 @@ const contactsSlice = createSlice({
         state.items = state.items.filter(
           (contact) => contact.id !== action.payload,
         );
-        .addCase(deleteContact.rejected, handleRejected);
+        .addCase(deleteContact.rejected, handleRejected)
       });
   },
 });
